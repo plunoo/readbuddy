@@ -4,10 +4,10 @@ import { AvatarType } from '../types';
 import { AVATARS, COLORS } from '../constants';
 
 interface OnboardingProps {
-  onCreate: (name: string, age: number, avatar: AvatarType, color: string) => void;
+  onCreateProfile: (profile: any) => void;
 }
 
-const Onboarding: React.FC<OnboardingProps> = ({ onCreate }) => {
+const Onboarding: React.FC<OnboardingProps> = ({ onCreateProfile }) => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [avatar, setAvatar] = useState<AvatarType>('Robot');
@@ -15,7 +15,22 @@ const Onboarding: React.FC<OnboardingProps> = ({ onCreate }) => {
 
   const handleNext = () => {
     if (step === 1 && name.trim()) setStep(2);
-    else if (step === 2) onCreate(name, 6, avatar, color);
+    else if (step === 2) {
+      const newProfile = {
+        id: Date.now().toString(),
+        name,
+        age: 6,
+        avatar,
+        color,
+        currentLevel: 1,
+        xp: 0,
+        stars: 0,
+        badges: [],
+        streak: 0,
+        lastPlayed: new Date().toISOString()
+      };
+      onCreateProfile(newProfile);
+    }
   };
 
   return (
