@@ -1,0 +1,7 @@
+{
+  "name": "ReadBuddy",
+  "description": "An AI-powered children's reading companion featuring a systematic phonics curriculum, voice-interactive lessons, and personalized story generation.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}
