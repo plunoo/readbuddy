@@ -6,12 +6,20 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+<<<<<<< HEAD
     "preview": "vite preview --host 0.0.0.0 --port $PORT"
+=======
+    "preview": "vite preview"
+>>>>>>> 3efe4a8ba51b2caf4678c0cfefe30431b1f1ce7c
   },
   "dependencies": {
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
+<<<<<<< HEAD
     "@google/genai": "^1.34.0"
+=======
+    "recharts": "^3.6.0"
+>>>>>>> 3efe4a8ba51b2caf4678c0cfefe30431b1f1ce7c
   },
   "devDependencies": {
     "@types/node": "^22.14.0",
