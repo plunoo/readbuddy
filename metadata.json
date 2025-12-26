@@ -1,10 +1,6 @@
 {
   "name": "ReadBuddy",
-<<<<<<< HEAD
   "description": "An AI-powered children's reading companion featuring a systematic phonics curriculum, voice-interactive lessons, and personalized story generation.",
-=======
-  "description": "An AI-powered reading companion for children ages 5-9, focusing on phonics and early literacy with a friendly robot guide.",
->>>>>>> 3efe4a8ba51b2caf4678c0cfefe30431b1f1ce7c
   "requestFramePermissions": [
     "microphone"
   ]
