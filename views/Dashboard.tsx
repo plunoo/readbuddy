@@ -62,17 +62,33 @@ const Dashboard: React.FC<DashboardProps> = ({ profile, onNavigate }) => {
                 }`}
               >
                 <div className="flex items-center gap-5 z-10">
-                  <div className={`w-14 h-14 rounded-2xl flex items-center justify-center text-3xl transition-transform group-hover:scale-110 ${
-                    isLocked ? 'bg-gray-100' : isDone ? 'bg-green-100' : 'bg-blue-100'
+                  <div className={`w-16 h-16 rounded-3xl flex items-center justify-center text-4xl font-black border-4 ${
+                    isDone 
+                      ? 'bg-green-100 border-green-300 text-green-600' 
+                      : isLocked 
+                        ? 'bg-gray-100 border-gray-200 text-gray-400'
+                        : 'bg-blue-100 border-blue-300 text-blue-600'
                   }`}>
-                    {isLocked ? '🔒' : isDone ? '✅' : level.level}
+                    {isDone ? '✅' : isLocked ? '🔒' : level.level}
                   </div>
-                  <div>
-                    <p className={`font-black text-lg ${isLocked ? 'text-gray-400' : 'text-gray-800'}`}>{level.title}</p>
-                    <p className="text-[10px] font-black text-gray-400 uppercase tracking-widest mt-1">{level.sounds.length} Phonics Sounds</p>
+                  <div className="flex-1">
+                    <h4 className={`text-lg font-extrabold mb-1 ${isLocked ? 'text-gray-400' : 'text-gray-800'}`}>
+                      {level.title}
+                    </h4>
+                    <p className={`text-xs font-medium mb-2 ${isLocked ? 'text-gray-300' : 'text-gray-500'}`}>
+                      {level.description}
+                    </p>
+                    <div className={`text-[10px] font-bold uppercase tracking-wide ${isLocked ? 'text-gray-300' : 'text-blue-500'}`}>
+                      Weeks {level.weeks} • {level.sounds.join(', ')}
+                    </div>
                   </div>
                 </div>
-                {!isLocked && <span className="text-gray-200 text-2xl font-black group-hover:text-blue-300 group-hover:translate-x-1 transition-all">›</span>}
+                
+                {!isLocked && !isDone && (
+                  <div className="text-3xl text-blue-500 group-hover:scale-110 transition-transform z-10">
+                    ▶️
+                  </div>
+                )}
               </button>
             );
           })}

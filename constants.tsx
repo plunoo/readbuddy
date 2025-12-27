@@ -15,12 +15,12 @@ export const COLORS = [
 ];
 
 export const PHONICS_LEVELS = [
-  { level: 1, title: 'Letter Fundamentals', sounds: ['s', 'a', 't', 'p', 'i', 'n', 'm', 'd'] },
-  { level: 2, title: 'Bouncing Sounds', sounds: ['g', 'o', 'c', 'k', 'ck', 'e', 'u', 'r'] },
-  { level: 3, title: 'The Loud Crowd', sounds: ['h', 'b', 'f', 'ff', 'l', 'll', 'ss'] },
-  { level: 4, title: 'Wiggly Waves', sounds: ['j', 'v', 'w', 'x', 'y', 'z', 'zz', 'qu'] },
+  { level: 1, title: 'Vowels First - A, E, I, O, U', sounds: ['a', 'e', 'i', 'o', 'u'] },
+  { level: 2, title: 'Easy Consonants', sounds: ['b', 'c', 'd', 'f', 'g', 'h', 'j'] },
+  { level: 3, title: 'More Consonants', sounds: ['k', 'l', 'm', 'n', 'p', 'q', 'r'] },
+  { level: 4, title: 'Final Consonants', sounds: ['s', 't', 'v', 'w', 'x', 'y', 'z'] },
   { level: 5, title: 'Dynamic Digraphs', sounds: ['ch', 'sh', 'th', 'ng'] },
-  { level: 6, title: 'Vowel Victories', sounds: ['ai', 'ee', 'igh', 'oa', 'oo'] }
+  { level: 6, title: 'Long Vowel Patterns', sounds: ['ai', 'ee', 'igh', 'oa', 'oo'] }
 ];
 
 export const BADGE_TIERS = [
